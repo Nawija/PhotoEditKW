@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    height: 150vh;
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #256874 74%);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    p:nth-child(1){
+        font-size: 24px;
+        font-weight: bold;
+        color: #eec0c6;
+        text-shadow: 2px 2px 3px rgb(90, 88, 88);
+        background-color: #256874;
+        box-shadow: 0px 0px 5px #eec0c6;
+        padding: 10px 15px;
+        border-radius: 21px;
+    }
+    p:nth-child(3){
+        font-size: 14px;
+        color: grey;
+    }
+    ul{
+        li{
+            list-style: none;
+            margin: 20px;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: min-content;
+                padding: 10px 30px;
+                text-decoration: none;
+                border-radius: 9px;
+                color:#256874;
+            }
+        }
+    }
+}
+
+.container-drop-img {
+    position: relative;
+    margin-left: 200px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .border-drop-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 500px;
+        width: 85%;
+        border: 5px dotted whitesmoke;
+        ion-icon {
+            font-size: 10rem;
+            margin-bottom: 20px;
+            color: whitesmoke;
+        }
+        p {
+            color: whitesmoke;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+    }
+    .panel-confing {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 85%;
+        .confing {
+            height: 400px;
+            width: 30%;
+            border: 2px solid rgb(172, 168, 168);
+            margin-top: 30px;
+            background-color: #b3cdd1;
+            background-image: linear-gradient(315deg, #cae0e4 0%, #9fa4c4 74%);
+        }
+    }
+}
