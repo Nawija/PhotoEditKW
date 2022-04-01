@@ -10,27 +10,32 @@
 </head>
 
 <body>
-    <nav>
-        <p>PhotoEditKW</p>
+    <nav id="navMenu">
+        <a class="logo" href="./index.html"><span>Pro</span><span>Idea</span><span>KW</span></a>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Save</a></li>
-            <li><a href="#">Dowload</a></li>
+            <li><a href="./index.html">PhotoEditor</a></li>
+            <li><a href="./GameXO/GameXO.html">GameXO</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">CommingSoon</a></li>
+            <li><a href="#">ComSoon</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Settings</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
         <p>&copy;Coryright 2022</p>
     </nav>
     <div class="wrapper">
         <div class="container-drop-img">
-            <div class="border-drop-img">
-                <ion-icon name="image"></ion-icon>
-                <p>Drop Image Here</p>
+            <div class="border-drop-img" >
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+                <p id="dropText">Drop & Drag Image Here</p>
+                <button id="browseFileBtn" class="browseFileBtn">Browse File</button>
+                <input id="inputImg" type="file" hidden>
             </div>
             <div class="panel-confing">
-                <div class="confing"></div>
+                <div class="confing">
+                    <p><input id="mirror" type="checkbox"> Mirror</p>
+                </div>
                 <div class="confing"></div>
                 <div class="confing"></div>
             </div>

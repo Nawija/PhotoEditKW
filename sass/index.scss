@@ -20,13 +20,14 @@ nav{
     position: fixed;
     top: 0;
     height: 100vh;
-    width: 200px;
+    width: 220px;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    p:nth-child(1){
+    .logo{
+        text-decoration: none;
         font-size: 24px;
         font-weight: bold;
         color: #eec0c6;
@@ -35,6 +36,19 @@ nav{
         box-shadow: 0px 0px 5px #eec0c6;
         padding: 10px 15px;
         border-radius: 21px;
+        transition: transform 0.3s;
+        span:nth-child(1){
+            color: white;
+        }
+        span:nth-child(2){
+            color: #baa9b1;
+        }
+        span:nth-child(3){
+            color: white;
+        }
+    }
+    .logo:hover{
+        transform: scale(1.06);
     }
     p:nth-child(3){
         font-size: 14px;
@@ -53,6 +67,10 @@ nav{
                 text-decoration: none;
                 border-radius: 9px;
                 color:#256874;
+                transition: color 0.3s;
+            }
+            a:hover{
+                color: cadetblue;
             }
         }
     }
@@ -60,12 +78,16 @@ nav{
 
 .container-drop-img {
     position: relative;
-    margin-left: 200px;
+    margin-left: 220px;
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    }
+    .mirror{
+        transform: scaleX(-1);
+    }
     .border-drop-img {
         display: flex;
         align-items: center;
@@ -73,7 +95,13 @@ nav{
         flex-direction: column;
         height: 500px;
         width: 85%;
-        border: 5px dotted whitesmoke;
+        border: 3px dashed whitesmoke;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            outline: 3px solid whitesmoke;
+        }
         ion-icon {
             font-size: 10rem;
             margin-bottom: 20px;
@@ -84,7 +112,18 @@ nav{
             font-size: 1.6rem;
             font-weight: bold;
         }
+        .browseFileBtn{
+            border-radius: 7px;
+            margin-top: 30px;
+            padding: 5px 10px;
+            font-size: 18px;
+            color: #256874;
+            cursor: pointer;
+        }
     }
+    .active{
+        border: 3px solid whitesmoke;}
+
     .panel-confing {
         display: flex;
         align-items: center;
@@ -92,12 +131,81 @@ nav{
         flex-direction: row;
         width: 85%;
         .confing {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
             height: 400px;
             width: 30%;
             border: 2px solid rgb(172, 168, 168);
             margin-top: 30px;
             background-color: #b3cdd1;
             background-image: linear-gradient(315deg, #cae0e4 0%, #9fa4c4 74%);
+            p{
+                color: #256874;
+            }
         }
     }
+
+
+// ------------ GameXO //
+
+
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 220px;
+}
+.border{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.square,.square1,.square2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small-square{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 90px;
+    color: rgb(188, 183, 238);
+    border: 2px solid rgb(182, 190, 204);
+    height: 25vh;
+    width: 20%;
+}
+
+.symbols{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    font-size: 20px;
+    color: royalblue;
+    text-shadow: 3px 3px 5px black;
+}
+span{
+    font-size: 21px;
+    color: red;
+    font-weight: bold;
+}
+.reset{
+    text-decoration: none;
+    position: absolute;
+    left: calc(50% + 110px);
+    bottom: 30px;
+    transform: translateX(-50%);
+    background-color: royalblue;
+    border-radius: 12px;
+    color: whitesmoke;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
 }
