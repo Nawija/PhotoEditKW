@@ -1,3 +1,5 @@
+@import './colors';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,69 +10,65 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     height: 150vh;
-    background-color: #eec0c6;
-    background-image: linear-gradient(315deg, #eec0c6 0%, #256874 74%);
+    background: $body-color;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1300px;
 }
-nav{
+nav {
     position: fixed;
     top: 0;
     height: 100vh;
     width: 220px;
-    background-color: #fff;
+    background-color: $nav-color;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    .logo{
+    .logo {
         text-decoration: none;
         font-size: 24px;
         font-weight: bold;
-        color: #eec0c6;
-        text-shadow: 2px 2px 3px rgb(90, 88, 88);
-        background-color: #256874;
-        box-shadow: 0px 0px 5px #eec0c6;
+        background-color: $body-color;
         padding: 10px 15px;
         border-radius: 21px;
+        box-shadow: 3px 3px 5px black;
         transition: transform 0.3s;
-        span:nth-child(1){
-            color: white;
+        span:nth-child(1),span:nth-child(3) {
+            color: $logo-text;
         }
-        span:nth-child(2){
-            color: #baa9b1;
-        }
-        span:nth-child(3){
-            color: white;
+        span:nth-child(2) {
+            color: $logo-middle-color-text;
         }
     }
-    .logo:hover{
+    .logo:hover {
         transform: scale(1.06);
     }
-    p:nth-child(3){
-        font-size: 14px;
+    p:nth-child(3) {
+        font-size: 13px;
         color: grey;
     }
-    ul{
-        li{
+    ul {
+        li {
             list-style: none;
             margin: 20px;
-            a{
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: min-content;
-                padding: 10px 30px;
+                padding: 10px 1px;
+                width: 110px;
                 text-decoration: none;
                 border-radius: 9px;
-                color:#256874;
-                transition: color 0.3s;
+                color: $a-color;
+                transition: width .8s, background .3s, color 0.3s;
             }
-            a:hover{
-                color: cadetblue;
+            a:hover {
+                width: 220px;
+                background-color: $body-color;
+                color: $a-color-hover;
             }
         }
     }
@@ -84,91 +82,106 @@ nav{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.mirror {
+    transform: scaleX(-1);
+}
+.border-drop-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 85%;
+    border: 3px dashed $white;
+    border-radius: 19px;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        outline: 3px solid $white;
     }
-    .mirror{
-        transform: scaleX(-1);
+    ion-icon {
+        font-size: 10rem;
+        margin-bottom: 20px;
+        color: $white;
     }
-    .border-drop-img {
+    p {
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    .browseFileBtn {
+        border-radius: 9px;
+        margin-top: 40px;
+        padding: 10px 20px;
+        border: 2px solid #2b353d;
+        font-size: 18px;
+        color: $orange;
+        background: #1f2c31;
+        outline: none;
+        cursor: pointer;
+    }
+}
+.active {
+    border: 3px solid $white;
+}
+
+.panel-confing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 85%;
+    .confing,.confing0 {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         flex-direction: column;
-        height: 500px;
-        width: 85%;
-        border: 3px dashed whitesmoke;
-        img{
-            height: 100%;
-            width: 100%;
-            object-fit:cover;
-            outline: 3px solid whitesmoke;
-        }
-        ion-icon {
-            font-size: 10rem;
-            margin-bottom: 20px;
-            color: whitesmoke;
-        }
+        height: 400px;
+        width: 60%;
+        border-radius: 9px;
+        margin-top: 50px;
+        border: 2px solid #2b353d;
+        background-color: $main-color;
         p {
-            color: whitesmoke;
-            font-size: 1.6rem;
-            font-weight: bold;
+            color: $orange;
         }
-        .browseFileBtn{
-            border-radius: 7px;
-            margin-top: 30px;
-            padding: 5px 10px;
-            font-size: 18px;
-            color: #256874;
-            cursor: pointer;
-        }
+        input[type='range'] {
+            width: 220px;
+            height: 5px;
+            -webkit-appearance: none;
+            background-color: #9a905d;
+          }
     }
-    .active{
-        border: 3px solid whitesmoke;}
-
-    .panel-confing {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 85%;
-        .confing {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            height: 400px;
-            width: 30%;
-            border: 2px solid rgb(172, 168, 168);
-            margin-top: 30px;
-            background-color: #b3cdd1;
-            background-image: linear-gradient(315deg, #cae0e4 0%, #9fa4c4 74%);
-            p{
-                color: #256874;
-            }
-        }
+    .confing0{
+        width: 30%;
     }
-
+}
 
 // ------------ GameXO //
 
-
-.game{
+.game {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin-left: 220px;
 }
-.border{
+.border {
     position: relative;
     width: 100%;
     cursor: pointer;
 }
-.square,.square1,.square2{
+.square,
+.square1,
+.square2 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.small-square{
+.small-square {
     display: flex;
     align-items: center;
     align-content: center;
@@ -181,26 +194,27 @@ nav{
     width: 20%;
 }
 
-.symbols{
+.symbols {
     position: absolute;
     top: 20px;
     left: 250px;
     font-size: 20px;
-    color: royalblue;
+    color: $orange;
     text-shadow: 3px 3px 5px black;
 }
-span{
-    font-size: 21px;
+.xo{
+    padding: 11px 5px;
+    font-size: 33px;
     color: red;
     font-weight: bold;
 }
-.reset{
+.reset {
     text-decoration: none;
     position: absolute;
     left: calc(50% + 110px);
     bottom: 30px;
     transform: translateX(-50%);
-    background-color: royalblue;
+    background-color: $orange;
     border-radius: 12px;
     color: whitesmoke;
     padding: 5px 10px;

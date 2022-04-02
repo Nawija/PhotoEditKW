@@ -22,8 +22,9 @@ ss.forEach(btn => {
     btn.addEventListener('click', change)
 });
 
-function reset() {
-    ssText.innerHTML = ' '
-}
+// function resultGame() {
+//     if
+// }
+
 
 resetbtn.addEventListener('click',reset)
