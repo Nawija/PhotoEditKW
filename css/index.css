@@ -235,10 +235,10 @@ nav ul li a:hover {
 }
 
 .panel-confing .confing input[type='range'], .panel-confing .confing0 input[type='range'] {
-  width: 220px;
-  height: 5px;
+  width: 180px;
+  height: 4px;
   -webkit-appearance: none;
-  background-color: #9a905d;
+  background-color: #c3ac3b;
 }
 
 .panel-confing .confing0 {
