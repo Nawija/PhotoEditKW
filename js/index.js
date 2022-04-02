@@ -1,9 +1,15 @@
+const burger = document.getElementById('burger')
+const nav = document.querySelector('nav')
 const borderDropImg = document.querySelector(".border-drop-img");
 const dropText = document.getElementById("dropText");
 const browseFileBtn = document.getElementById("browseFileBtn");
 const inputImg = document.getElementById("inputImg");
 let file; // watch out!!! :)
 const mirror = document.getElementById("mirror");
+
+burger.onclick = () =>{
+    nav.classList.toggle('nav-burger')
+}
 
 mirror.onclick = () => {
     borderDropImg.classList.toggle("mirror");
@@ -57,3 +63,4 @@ function downloadImg() {
         
     }
 }
+

@@ -3,6 +3,8 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body {
@@ -14,6 +16,17 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1300px;
+}
+
+.burger {
+  display: none;
+}
+
+.nav-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
 }
 
 nav {
@@ -243,6 +256,7 @@ nav ul li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  width: calc(100vw - (margin-left: 220px));
   margin-left: 220px;
 }
 
@@ -318,5 +332,47 @@ nav ul li a:hover {
   outline: none;
   cursor: pointer;
   font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  .container-drop-img {
+    margin-left: 0px;
+  }
+  .game {
+    margin-left: 0px;
+    width: calc(100vw);
+  }
+  .symbols {
+    font-size: 33px;
+    top: 14%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .small-square {
+    width: 25%;
+    height: 15vh;
+  }
+  .reset {
+    left: 50%;
+    bottom: 100px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-size: 30px;
+    color: #cccccc;
+    border: none;
+    outline: none;
+    background: none;
+    z-index: 999;
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=index.css.map */

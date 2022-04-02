@@ -1,7 +1,13 @@
+const burger = document.getElementById('burger')
+const nav = document.querySelector('nav')
 const ss = document.querySelectorAll('a')
 const ssText = document.querySelector('.div')
 let xo = document.getElementById('xo')
 const resetbtn = document.getElementById('reset')
+
+burger.onclick = () =>{
+    nav.classList.toggle('nav-burger')
+}
 
 console.log('Starting...')
 
@@ -25,6 +31,5 @@ ss.forEach(btn => {
 // function resultGame() {
 //     if
 // }
-
 
 resetbtn.addEventListener('click',reset)
