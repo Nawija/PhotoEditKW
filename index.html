@@ -5,61 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoEditKW</title>
+    <title>DoFame</title>
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <button id="burger" class="burger"><ion-icon name="menu"></ion-icon></button>
-    <nav id="navMenu">
-        <a class="logo" href="./index.html"><span>Pro</span><span>Idea</span><span>KW</span></a>
-        <ul>
-            <li><a href="./index.html">PhotoEditor</a></li>
-            <li><a href="./GameXO/GameXO.html">GameXO</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">CommingSoon</a></li>
-            <li><a href="#">ComSoon</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <p>&copy;Coryright 2022</p>
+    <nav>
+        <div id="burger" class="burger">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+        <div class="nav-menu">
+            <a class="nav-logo" href="index.html">
+                <ion-icon class="logo-firebase" name="logo-firebase"></ion-icon><br>Do<span>Fame</span>
+            </a>
+
+            <ul>
+                <li>
+                    <a href="photoEdit.html">photo edit</a>
+                    <a href="gameXo.html">gamexo</a>
+                    <a href="calculator.html">calculator</a>
+                    <a href="youtube.html">youtube</a>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+            <p>&copy; copyright 2022</p>
+        </div>
     </nav>
     <div class="wrapper">
-        <div class="container-drop-img">
-            <div class="border-drop-img">
-                <ion-icon name="cloud-upload-outline"></ion-icon>
-                <p id="dropText">Drop & Drag Image Here</p>
-                <button id="browseFileBtn" class="browseFileBtn">Browse File</button>
-                <input id="inputImg" type="file" hidden>
-            </div>
-            <div class="panel-confing">
-                <div class="confing0">
-                    <p><input id="mirror" type="checkbox"> Mirror</p>
-                    <p><input id="mirror" type="checkbox"> Mirror</p>
-                    <p><input id="mirror" type="checkbox"> Mirror</p>
-                    <p><input id="mirror" type="checkbox"> Mirror</p>
-                    <p><input id="mirror" type="checkbox"> Mirror</p>
-                </div>
-                <div class="confing">
-                    <input id="blur" type="range" max="200" min="0" value="0" class="show-value">
-                    <input id="saturation" type="range" max="200" min="0" value="0" class="show-value">
-                    <input id="saturation" type="range" max="200" min="0" value="0" class="show-value">
-                    <input id="saturation" type="range" max="200" min="0" value="0" class="show-value">
-                    <input id="saturation" type="range" max="200" min="0" value="0" class="show-value">
-                    <input id="saturation" type="range" max="200" min="0" value="0" class="show-value">
-                </div>
+        <h1>DoFame</h1>
+        <div class="sh"></div>
 
-
-            </div>
-
-        </div>
     </div>
-
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./JavaScript/index.js"></script>
+    <script>
+        const burger = document.getElementById('burger')
+        const navMenu = document.querySelector('.nav-menu')
+
+        burger.onclick = () => {
+            navMenu.classList.toggle('nav-menu-toggle')
+        }
+
+    </script>
 </body>
 
 </html>
