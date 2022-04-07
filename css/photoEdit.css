@@ -29,7 +29,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   color: aliceblue;
-  height: 600px;
+  height: 85vh;
   width: 70%;
   border: 1px dashed whitesmoke;
   text-align: center;
@@ -51,9 +51,10 @@
 }
 
 .container .result label {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin: 10px 0;
+  padding: 0 10px;
 }
 
 .container .result button {
@@ -80,7 +81,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 5px 20px;
-  height: 600px;
+  height: 85vh;
   background: linear-gradient(132deg, #b968e7, #2c969c 95%);
   border-radius: 12px;
   z-index: 2;
@@ -111,6 +112,8 @@
   }
   .container .result {
     margin-bottom: 30px;
+    height: 50vh;
+    width: 95%;
   }
   .container .editor {
     margin-left: 0;
@@ -122,7 +125,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 5px 20px;
-    height: 300px;
+    height: 50vh;
   }
   .container .editor .mirror-btn {
     width: 100%;
