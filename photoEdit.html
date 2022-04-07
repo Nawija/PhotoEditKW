@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoFame</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/photoEdit.css">
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="top-side">
+                <h1>DoFame</h1>
+                <div id="burger" class="burger">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <a class="nav-logo" href="index.html">
+                <ion-icon class="logo-firebase" name="logo-firebase"></ion-icon><br>Do<span>Fame</span>
+            </a>
+
+            <ul>
+                <li>
+                    <a href="photoEdit.html">photo edit</a>
+                    <a href="gameXo.html">gamexo</a>
+                    <a href="calculator.html">calculator</a>
+                    <a href="youtube.html">youtube</a>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+            <p>&copy; copyright 2022</p>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+            <div class="result">
+                <figure class="image-container">
+                    <ion-icon name="cloud-upload"></ion-icon>
+                </figure>
+                <img id="chosen-image" src="">
+                <label for="upload-btn">Drag & Drop Image Here</label>
+                <input type="file" id="input-upload-btn" accept="Image/*"hidden>
+                <button id="upload-btn">Choose File</button>
+            </div>
+            <div class="editor">
+                <div class="filter">
+                    <label for="contrast">Contrast</label>
+                    <input type="range" max="200" min="0" value="100" id="contrast">
+                </div>
+                <div class="filter">
+                    <label for="hue-rotate">Hue-rotate</label>
+                    <input type="range" max="200" min="0" value="100" id="hue-rotate">
+                </div>
+                <div class="filter">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" max="200" min="0" value="100" id="sepia">
+                </div>
+                <div class="filter">
+                    <label for="blur">Blur</label>
+                    <input type="range" max="5" min="0" value="0" id="blur">
+                </div>
+                <div class="mirror-btn">
+                    <input type="checkbox" id="mirror-btn">
+                    <label for="mirror-btn">Mirror</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./JavaScript/photoEdit.js"></script>
+    <script>
+        const burger = document.getElementById('burger')
+        const navMenu = document.querySelector('.nav-menu')
+
+        burger.onclick = () => {
+            navMenu.classList.toggle('nav-menu-toggle')
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.container {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .result {
+        position: relative;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: aliceblue;
+        height: 600px;
+        width: 70%;
+        border: 1px dashed whitesmoke;
+        text-align: center;
+        img {
+            position: absolute;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        ion-icon {
+            font-size: 20rem;
+        }
+        label {
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button {
+            background-color: rgb(235, 200, 136);
+            padding: 7px 17px;
+            margin-top: 5px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .editor {
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 5px 20px;
+        height: 600px;
+        background: linear-gradient(
+            132deg,
+            rgb(185, 104, 231),
+            rgb(44, 150, 156) 95%
+        );
+        border-radius: 12px;
+        z-index: 2;
+        .filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        .result {
+            margin-bottom: 30px;
+        }
+        .editor {
+            margin-left: 0;
+            width: 70%;
+            flex-direction: row;
+            flex-wrap:wrap;
+            padding: 5px 20px;
+            height: 300px;
+            .mirror-btn{
+                width: 100%;
+                text-align: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
