@@ -1,5 +1,26 @@
-h1{
-    font-size: 2rem;
-    padding: 15px;
-    color: whitesmoke;
+.hero-video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 90%;
+    overflow: hidden;
+    video {
+        max-width: 1400px;
+        max-height: 660px;
+        margin: 0 auto;
+        border-radius: 19px;
+        z-index: 0;
+    }
+    h2 {
+        position: absolute;
+        top: 70%;
+        color: white;
+        z-index: 99;
+        text-align: center;
+        width: 70%;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
 }

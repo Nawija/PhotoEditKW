@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 *,
 *::after,
 *::before {
@@ -16,13 +16,14 @@ body {
     font-size: 1.6rem;
     background: $bodyC;
 }
-.wrapper{
-    max-width: 1300px;
+.wrapper {
+    position: relative;
+    max-width: 1200px;
     margin: 0 auto;
 }
-.wrapper::after{
+.wrapper::after {
     position: fixed;
-    content: ' ';
+    content: " ";
     top: 220px;
     right: 220px;
     height: 300px;
@@ -31,9 +32,9 @@ body {
     opacity: 50%;
     box-shadow: 420px -420px 690px $purpleC;
 }
-.wrapper::before{
+.wrapper::before {
     position: fixed;
-    content: ' ';
+    content: " ";
     top: 220px;
     left: 420px;
     height: 300px;
@@ -42,53 +43,66 @@ body {
     box-shadow: -420px 420px 690px $blueC;
 }
 nav {
-    position: fixed;
     overflow: hidden;
     width: 100%;
-    .burger {
-        position: absolute;
-        top: 4.5px;
-        right: 9px;
-        font-size: 3.5rem;
-        padding: 5px;
-        z-index: 999;
-        color: white;
-        text-shadow: 3px 3px 5px white;
-        cursor: pointer;
+    .top-side {
+        position: relative;
+        .burger {
+            position: absolute;
+            top: 4.5px;
+            right: 9px;
+            font-size: 3rem;
+            padding: 5px;
+            z-index: 999;
+            color: white;
+            text-shadow: 3px 3px 5px white;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 1.6rem;
+            padding: 15px;
+            color: whitesmoke;
+        }
     }
     .nav-menu {
+        position: fixed;
+        top: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
         padding: 20px;
         height: 100vh;
-        width: 220px;
+        width: 320px;
         text-align: center;
         border-radius: 0 22px 0px 0;
         background: $gradient;
         transform: translateX(-105%);
-        transition: transform .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
         z-index: 10;
         .nav-logo {
+            margin-top: 20px;
             font-size: 3rem;
             text-decoration: none;
             color: $mainC;
             font-weight: bold;
-            span{
+            span {
                 color: orange;
             }
         }
-        .logo-firebase{
+        .logo-firebase {
             font-size: 8rem;
             color: $mainC;
         }
-        ul{
-            li{
+        ul {
+            width: 100%;
+            li {
                 display: flex;
                 flex-direction: column;
                 list-style: none;
-                a{
+                a {
+                    margin: 0 auto;
+                    width: 70%;
                     margin-bottom: 50px;
                     font-size: 1.8rem;
                     padding: 5px 10px;
@@ -97,10 +111,15 @@ nav {
                     border-radius: 12px;
                     text-transform: capitalize;
                     background-color: rgb(255, 255, 255);
+                    transition: color .3s ,transform 0.3s;
+                }
+                a:hover{
+                    color: orange;
+                    transform: translateX(10%);
                 }
             }
         }
-        p{
+        p {
             color: rgba(255, 255, 255, 0.723);
             font-size: 1.4rem;
         }
@@ -111,4 +130,3 @@ nav {
         transition: 1s;
     }
 }
-
