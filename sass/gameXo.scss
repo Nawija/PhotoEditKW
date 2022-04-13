@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 49px);
+}
+.turn{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    font-size: 33px;
+}
+.squares{
+    z-index: 9;
+    .square{
+        height: 180px;
+        width: 180px;
+        border: 2px solid whitesmoke;
+        cursor: pointer;
+    }
+}

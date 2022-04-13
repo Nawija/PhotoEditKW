@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.burger {
+  margin-top: 5px;
+  background-color: #ff8400;
+  padding: 10px 20px !important;
+  font-size: 1.6rem !important;
+  outline: 1px solid #ffbb00;
+  text-shadow: none !important;
+  border-radius: 9px;
+}
+
+h1 {
+  font-size: 2rem !important;
+}
+
+.container {
+  position: absolute;
+  top: -55px;
+  left: -20px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://compass-ssl.xbox.com/assets/f6/a3/f6a3edf9-cdfc-4db5-941d-5c109aa73cdd.jpg?n=Tetris-Effect-Connected_GLP-Page-Hero-1084_1920x1080.jpg);
+  z-index: -1;
+}
+/*# sourceMappingURL=index.css.map */
