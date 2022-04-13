@@ -19,7 +19,8 @@
   left: 50%;
   height: 90vh;
   width: 40%;
-  color: white;
+  color: #e6af49;
+  text-shadow: 12px 9px 3px #02071c;
   font-size: 26px;
 }
 

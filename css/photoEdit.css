@@ -89,6 +89,7 @@
 }
 
 .container .editor .filter {
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +105,7 @@
           flex-direction: column;
 }
 
-@media (max-width: 408px) {
+@media (max-width: 472px) {
   input[type="range"] {
     width: 140%;
   }

@@ -60,6 +60,7 @@
         border-radius: 12px;
         z-index: 2;
         .filter {
+            padding: 0 15px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,7 +68,7 @@
         }
     }
 }
-@media (max-width: 408px){
+@media (max-width: 472px){
     input[type="range"]{
         width: 140%;
     }
