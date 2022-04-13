@@ -14,8 +14,6 @@
 }
 
 .hero-video video {
-  max-width: 1400px;
-  max-height: 660px;
   margin: 0 auto;
   border-radius: 19px;
   z-index: 0;
