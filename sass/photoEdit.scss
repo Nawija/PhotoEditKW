@@ -1,3 +1,14 @@
+.download-img{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    padding: 5px 10px;
+    background-color: orange;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
 .container {
     margin-top: 15px;
     position: relative;
@@ -24,6 +35,9 @@
             max-height: 100%;
             object-fit: cover;
             border-radius: 12px;
+        }
+        .mirror{
+            transform: scaleX(-1);
         }
         ion-icon {
             font-size: 20rem;

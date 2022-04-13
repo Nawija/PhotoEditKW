@@ -15,6 +15,7 @@
         <div class="wrapper">
             <div class="top-side">
                 <h1>DoFame</h1>
+                <button id="download-img" class="download-img">Download Img</button>
                 <div id="burger" class="burger">
                     <ion-icon name="menu"></ion-icon>
                 </div>
@@ -55,11 +56,19 @@
                 </div>
                 <div class="filter">
                     <label for="hue-rotate">Hue-rotate</label>
-                    <input type="range" max="200" min="0" value="100" id="hue-rotate">
+                    <input type="range" max="200" min="0" value="0" id="hue-rotate">
                 </div>
                 <div class="filter">
                     <label for="sepia">Sepia</label>
-                    <input type="range" max="200" min="0" value="100" id="sepia">
+                    <input type="range" max="200" min="0" value="0" id="sepia">
+                </div>
+                <div class="filter">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" max="200" min="0" value="100" id="brightness">
+                </div>
+                <div class="filter">
+                    <label for="saturate">Saturate</label>
+                    <input type="range" max="200" min="0" value="100" id="saturate">
                 </div>
                 <div class="filter">
                     <label for="blur">Blur</label>
@@ -76,6 +85,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./JavaScript/photoEdit.js"></script>
+    <script src="./JavaScript/FileSaver.js"></script>
     <script>
         const burger = document.getElementById('burger')
         const navMenu = document.querySelector('.nav-menu')
