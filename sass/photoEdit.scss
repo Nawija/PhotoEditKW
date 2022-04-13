@@ -67,8 +67,13 @@
         }
     }
 }
+@media (max-width: 408px){
+    input[type="range"]{
+        width: 140%;
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 741px) {
     .container {
         flex-direction: column;
         .result {
@@ -78,7 +83,7 @@
         }
         .editor {
             margin-left: 0;
-            width: 70%;
+            width: 95%;
             flex-direction: row;
             flex-wrap:wrap;
             padding: 5px 20px;
