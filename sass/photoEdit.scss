@@ -1,7 +1,7 @@
 .download-img{
     position: absolute;
-    top: 20px;
-    left: 50%;
+    top: 12px;
+    right: 69px;
     padding: 5px 10px;
     background-color: orange;
     border: none;
@@ -83,12 +83,18 @@
     }
 }
 @media (max-width: 472px){
+    .download-img{
+        left: 50%;
+    }
     input[type="range"]{
         width: 140%;
     }
 }
 
 @media (max-width: 741px) {
+    .download-img{
+        left: 50%;
+    }
     .container {
         flex-direction: column;
         .result {

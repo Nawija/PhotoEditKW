@@ -42,7 +42,7 @@ mirrorBtn.onclick = () =>{
 }
 
 downloadImg.addEventListener('click', ()=>{
-    let imgPath = chosenImage.getAttribute('src').style.filter
+    let imgPath = chosenImage.getAttribute('src')
     let fileName = getFileName(imgPath)
     saveAs(imgPath,fileName)
 })
